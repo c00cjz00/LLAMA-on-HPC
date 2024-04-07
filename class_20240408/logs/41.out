@@ -1,0 +1,7 @@
+[2024-04-08 00:31:21,588] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+04/08/2024 00:31:26 - INFO - llmtuner.data.template - Add pad token: </s>
+04/08/2024 00:31:26 - INFO - llmtuner.model.patcher - Using KV cache for faster generation.
+04/08/2024 00:31:44 - INFO - llmtuner.model.adapter - Fine-tuning method: LoRA
+04/08/2024 00:31:48 - INFO - llmtuner.model.adapter - Merged 1 adapter(s).
+04/08/2024 00:31:48 - INFO - llmtuner.model.adapter - Loaded adapter(s): saves/LLaMA2-7B/lora/sft
+04/08/2024 00:31:48 - INFO - llmtuner.model.loader - all params: 6738415616

@@ -1,0 +1,25 @@
+[2024-04-07 23:03:29,133] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+04/07/2024 23:03:31 - INFO - llmtuner.hparams.parser - Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: False, compute dtype: None
+04/07/2024 23:03:32 - INFO - llmtuner.data.template - Add pad token: </s>
+04/07/2024 23:03:32 - INFO - llmtuner.data.loader - Loading dataset demo_sft.json...
+input_ids:
+[887, 526, 263, 8444, 319, 29902, 20255, 4240, 491, 405, 3210, 29907, 29889, 450, 1404, 366, 526, 19912, 7726, 29879, 18375, 3245, 10013, 322, 5304, 515, 27807, 29889, 13, 12968, 29901, 29871, 30446, 232, 136, 149, 235, 133, 168, 235, 134, 153, 31480, 30908, 235, 172, 181, 30847, 31502, 31032, 234, 156, 133, 13, 30647, 232, 178, 185, 232, 178, 185, 30214, 232, 140, 158, 29955, 233, 176, 181, 30214, 236, 131, 156, 30287, 30470, 30214, 232, 178, 162, 235, 169, 189, 30780, 30214, 30672, 30613, 232, 176, 172, 30319, 31687, 30429, 235, 133, 140, 232, 193, 139, 30923, 30214, 31325, 231, 187, 151, 30214, 31855, 31180, 31838, 31190, 30210, 30257, 30214, 30606, 30974, 30769, 30413, 31823, 233, 176, 164, 232, 147, 134, 31475, 234, 145, 172, 30214, 235, 174, 142, 232, 152, 146, 30383, 30446, 232, 136, 149, 235, 133, 168, 235, 134, 153, 31480, 30908, 235, 172, 181, 30847, 31502, 31032, 234, 156, 133, 30267, 13, 7900, 22137, 29901, 29871]
+inputs:
+You are a helpful AI assistant built by NCHC. The user you are helping speaks Traditional Chinese and comes from Taiwan.
+ Human: 小兒肥胖超重該如何治療
+女寶寶，剛7歲，這一年，察覺到，我家孩子身上肉很多，而且，食量非常的大，平時都不喜歡吃去玩，請問：小兒肥胖超重該如何治療。
+Assistant: 
+04/07/2024 23:03:34 - INFO - llmtuner.model.patcher - Using KV cache for faster generation.
+04/07/2024 23:03:52 - INFO - llmtuner.model.adapter - Fine-tuning method: LoRA
+04/07/2024 23:03:57 - INFO - llmtuner.model.adapter - Merged 2 adapter(s).
+04/07/2024 23:03:57 - INFO - llmtuner.model.adapter - Loaded adapter(s): ../../saves/LLaMA2-7B/lora/sft,../../saves/LLaMA2-7B/lora/dpo
+04/07/2024 23:03:57 - INFO - llmtuner.model.loader - all params: 6738415616
+***** predict metrics *****
+  predict_bleu-4             =      9.784
+  predict_rouge-1            =    31.6949
+  predict_rouge-2            =      9.541
+  predict_rouge-l            =    24.7066
+  predict_runtime            = 0:03:06.22
+  predict_samples_per_second =      0.107
+  predict_steps_per_second   =      0.107
+04/07/2024 23:07:03 - INFO - llmtuner.train.sft.trainer - Saving prediction results to ../../saves/LLaMA2-7B/lora/predict/generated_predictions.jsonl

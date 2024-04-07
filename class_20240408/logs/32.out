@@ -1,0 +1,12 @@
+[2024-04-07 23:15:57,828] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+04/07/2024 23:16:00 - INFO - llmtuner.data.template - Add pad token: </s>
+04/07/2024 23:16:00 - INFO - llmtuner.model.patcher - Using KV cache for faster generation.
+04/07/2024 23:16:18 - INFO - llmtuner.model.adapter - Fine-tuning method: LoRA
+04/07/2024 23:16:22 - INFO - llmtuner.model.adapter - Merged 1 adapter(s).
+04/07/2024 23:16:22 - INFO - llmtuner.model.adapter - Loaded adapter(s): saves/LLaMA2-7B/lora/sft
+04/07/2024 23:16:22 - INFO - llmtuner.model.loader - all params: 6738415616
+        Average: 43.78
+           STEM: 34.60
+Social Sciences: 49.23
+     Humanities: 41.47
+          Other: 50.50
