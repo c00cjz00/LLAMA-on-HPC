@@ -1,4 +1,8 @@
-# 下載程式碼 llm_course_20240408
+# LLAMA-on-HPC class_20240408
+## 登入HPC, 請將$ACCOUNT改為你的帳號
+```
+ssh $ACCOUNT@ln01.twcc.ai
+```
 ## 下載程式碼
 - 下載程式碼
 ```
