@@ -1,4 +1,0 @@
-https://node01.biobank.org.tw/rstudio/172.17.9.14/48867/
-Account: nchc
-Password: nchcorgtw
-[2024-04-07 19:32:30,100] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)

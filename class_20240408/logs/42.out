@@ -1,5 +1,0 @@
-[2024-04-08 00:34:10,426] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-04/08/2024 00:34:31 - INFO - llmtuner.model.patcher - Quantizing model to 4 bit.
-04/08/2024 00:34:31 - INFO - llmtuner.model.patcher - Using KV cache for faster generation.
-04/08/2024 00:52:08 - INFO - llmtuner.model.adapter - Adapter is not found at evaluation, load the base model.
-04/08/2024 00:52:08 - INFO - llmtuner.model.loader - all params: 262410240

@@ -1,362 +1,0 @@
-[INFO|tokenization_utils_base.py:2082] 2024-04-08 00:34:13,213 >> loading file tokenizer.model
-[INFO|tokenization_utils_base.py:2082] 2024-04-08 00:34:13,213 >> loading file added_tokens.json
-[INFO|tokenization_utils_base.py:2082] 2024-04-08 00:34:13,213 >> loading file special_tokens_map.json
-[INFO|tokenization_utils_base.py:2082] 2024-04-08 00:34:13,213 >> loading file tokenizer_config.json
-[INFO|tokenization_utils_base.py:2082] 2024-04-08 00:34:13,213 >> loading file tokenizer.json
-[INFO|configuration_utils.py:724] 2024-04-08 00:34:13,373 >> loading configuration file models/llama2-7b-sft/config.json
-[INFO|configuration_utils.py:789] 2024-04-08 00:34:13,374 >> Model config LlamaConfig {
-  "_name_or_path": "models/llama2-7b-sft",
-  "architectures": [
-    "LlamaForCausalLM"
-  ],
-  "attention_bias": false,
-  "attention_dropout": 0.0,
-  "bos_token_id": 1,
-  "eos_token_id": 2,
-  "hidden_act": "silu",
-  "hidden_size": 4096,
-  "initializer_range": 0.02,
-  "intermediate_size": 11008,
-  "max_position_embeddings": 4096,
-  "model_type": "llama",
-  "num_attention_heads": 32,
-  "num_hidden_layers": 32,
-  "num_key_value_heads": 32,
-  "pretraining_tp": 1,
-  "rms_norm_eps": 1e-05,
-  "rope_scaling": null,
-  "rope_theta": 10000.0,
-  "tie_word_embeddings": false,
-  "torch_dtype": "float16",
-  "transformers_version": "4.39.3",
-  "use_cache": true,
-  "vocab_size": 32000
-}
-
-Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 300 examples [00:00, 4255.12 examples/s]
-[INFO|quantization_config.py:564] 2024-04-08 00:34:21,561 >> You have activated exllama backend. Note that you can get better inference speed using exllamav2 kernel by setting `exllama_config`.
-CUDA extension not installed.
-CUDA extension not installed.
-[INFO|modeling_utils.py:3280] 2024-04-08 00:34:32,229 >> loading weights file models/llama2-7b-sft/model.safetensors.index.json
-[INFO|modeling_utils.py:1417] 2024-04-08 00:34:32,229 >> Instantiating LlamaForCausalLM model under default dtype torch.float16.
-[INFO|configuration_utils.py:928] 2024-04-08 00:34:32,261 >> Generate config GenerationConfig {
-  "bos_token_id": 1,
-  "eos_token_id": 2
-}
-
-Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s]Loading checkpoint shards:  14%|█▍        | 1/7 [00:02<00:16,  2.74s/it]Loading checkpoint shards:  29%|██▊       | 2/7 [00:05<00:13,  2.79s/it]Loading checkpoint shards:  43%|████▎     | 3/7 [00:08<00:11,  2.81s/it]Loading checkpoint shards:  57%|█████▋    | 4/7 [00:11<00:08,  2.81s/it]Loading checkpoint shards:  71%|███████▏  | 5/7 [00:13<00:05,  2.77s/it]Loading checkpoint shards:  86%|████████▌ | 6/7 [00:16<00:02,  2.76s/it]Loading checkpoint shards: 100%|██████████| 7/7 [00:19<00:00,  2.66s/it]Loading checkpoint shards: 100%|██████████| 7/7 [00:19<00:00,  2.73s/it]
-[INFO|modeling_utils.py:4024] 2024-04-08 00:34:51,785 >> All model checkpoint weights were used when initializing LlamaForCausalLM.
-
-[INFO|modeling_utils.py:4032] 2024-04-08 00:34:51,785 >> All the weights of LlamaForCausalLM were initialized from the model checkpoint at models/llama2-7b-sft.
-If your task is similar to the task the model of the checkpoint was trained on, you can already use LlamaForCausalLM for predictions without further training.
-[INFO|configuration_utils.py:881] 2024-04-08 00:34:51,788 >> loading configuration file models/llama2-7b-sft/generation_config.json
-[INFO|configuration_utils.py:928] 2024-04-08 00:34:51,788 >> Generate config GenerationConfig {
-  "bos_token_id": 1,
-  "do_sample": true,
-  "eos_token_id": 2,
-  "max_length": 4096,
-  "pad_token_id": 0,
-  "temperature": 0.6,
-  "top_p": 0.9
-}
-
-Quantizing model.layers blocks :   0%|          | 0/32 [00:00<?, ?it/s]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:10<01:00, 10.06s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:12<00:28,  5.67s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:15<00:17,  4.26s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:17<00:10,  3.58s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:20<00:06,  3.25s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:23<00:03,  3.03s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:30<00:00,  4.43s/it][A
-                                                                                 [AQuantizing model.layers blocks :   3%|▎         | 1/32 [00:31<16:11, 31.33s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.59s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.58s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.57s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.58s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.60s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.60s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.10s/it][A
-                                                                                 [AQuantizing model.layers blocks :   6%|▋         | 2/32 [00:55<13:25, 26.84s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.61s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.60s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.58s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.58s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.59s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.61s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.11s/it][A
-                                                                                 [AQuantizing model.layers blocks :   9%|▉         | 3/32 [01:18<12:17, 25.43s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.61s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.60s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.58s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.58s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.60s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.61s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.11s/it][A
-                                                                                 [AQuantizing model.layers blocks :  12%|█▎        | 4/32 [01:42<11:33, 24.77s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.59s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.59s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.58s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.58s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.60s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.60s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.11s/it][A
-                                                                                 [AQuantizing model.layers blocks :  16%|█▌        | 5/32 [02:06<10:58, 24.40s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.59s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.57s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.58s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.59s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.60s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.61s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.10s/it][A
-                                                                                 [AQuantizing model.layers blocks :  19%|█▉        | 6/32 [02:29<10:28, 24.17s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.55s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.58s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.58s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.59s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.60s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.61s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.07s/it][A
-                                                                                 [AQuantizing model.layers blocks :  22%|██▏       | 7/32 [02:53<09:59, 23.99s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.62s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:13,  2.60s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.60s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.60s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:13<00:05,  2.60s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.61s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.09s/it][A
-                                                                                 [AQuantizing model.layers blocks :  25%|██▌       | 8/32 [03:17<09:33, 23.91s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.60s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.59s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.60s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.60s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:13<00:05,  2.61s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.61s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.09s/it][A
-                                                                                 [AQuantizing model.layers blocks :  28%|██▊       | 9/32 [03:40<09:07, 23.81s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:16,  2.74s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:13,  2.66s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.63s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.61s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:13<00:05,  2.62s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.62s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.09s/it][A
-                                                                                 [AQuantizing model.layers blocks :  31%|███▏      | 10/32 [04:04<08:44, 23.83s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.60s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:13,  2.61s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.60s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.60s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.59s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.60s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.09s/it][A
-                                                                                 [AQuantizing model.layers blocks :  34%|███▍      | 11/32 [04:28<08:19, 23.80s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.61s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:13,  2.61s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.60s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.60s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:13<00:05,  2.60s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.59s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.09s/it][A
-                                                                                 [AQuantizing model.layers blocks :  38%|███▊      | 12/32 [04:52<07:55, 23.77s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.61s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.60s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.60s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.60s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:13<00:05,  2.60s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.61s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.11s/it][A
-                                                                                 [AQuantizing model.layers blocks :  41%|████      | 13/32 [05:16<07:31, 23.78s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.59s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.60s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.59s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.59s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.60s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.60s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.09s/it][A
-                                                                                 [AQuantizing model.layers blocks :  44%|████▍     | 14/32 [05:39<07:07, 23.76s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.59s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.60s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.59s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.58s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.58s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.59s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.09s/it][A
-                                                                                 [AQuantizing model.layers blocks :  47%|████▋     | 15/32 [06:03<06:43, 23.73s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.60s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.59s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.59s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.59s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.59s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.59s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.09s/it][A
-                                                                                 [AQuantizing model.layers blocks :  50%|█████     | 16/32 [06:27<06:19, 23.71s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.59s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.59s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.59s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.59s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.60s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.60s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.09s/it][A
-                                                                                 [AQuantizing model.layers blocks :  53%|█████▎    | 17/32 [06:50<05:55, 23.71s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.58s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.59s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.58s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.58s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.59s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.60s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.08s/it][A
-                                                                                 [AQuantizing model.layers blocks :  56%|█████▋    | 18/32 [07:14<05:31, 23.69s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.59s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.59s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.58s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.58s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.59s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.59s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.09s/it][A
-                                                                                 [AQuantizing model.layers blocks :  59%|█████▉    | 19/32 [07:38<05:07, 23.68s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.60s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.59s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.59s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.59s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.60s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.60s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.10s/it][A
-                                                                                 [AQuantizing model.layers blocks :  62%|██████▎   | 20/32 [08:01<04:44, 23.70s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.58s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.58s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.58s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.58s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.59s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.58s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.08s/it][A
-                                                                                 [AQuantizing model.layers blocks :  66%|██████▌   | 21/32 [08:25<04:20, 23.67s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.58s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.59s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.58s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.57s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.58s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.59s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.08s/it][A
-                                                                                 [AQuantizing model.layers blocks :  69%|██████▉   | 22/32 [08:49<03:56, 23.66s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.59s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.59s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.58s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.57s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.59s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.60s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.05s/it][A
-                                                                                 [AQuantizing model.layers blocks :  72%|███████▏  | 23/32 [09:12<03:32, 23.63s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.54s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.54s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.54s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.54s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.55s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.55s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.02s/it][A
-                                                                                 [AQuantizing model.layers blocks :  75%|███████▌  | 24/32 [09:35<03:08, 23.52s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.55s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.54s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.54s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.54s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.55s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.56s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.03s/it][A
-                                                                                 [AQuantizing model.layers blocks :  78%|███████▊  | 25/32 [09:59<02:44, 23.46s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.54s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.56s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.55s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.55s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.57s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.57s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.04s/it][A
-                                                                                 [AQuantizing model.layers blocks :  81%|████████▏ | 26/32 [10:22<02:20, 23.44s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.53s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.54s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.54s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.54s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.55s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.55s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.03s/it][A
-                                                                                 [AQuantizing model.layers blocks :  84%|████████▍ | 27/32 [10:45<01:56, 23.40s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.54s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.54s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.55s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.55s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.55s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.57s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.03s/it][A
-                                                                                 [AQuantizing model.layers blocks :  88%|████████▊ | 28/32 [11:09<01:33, 23.38s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.55s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.54s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.55s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.55s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.55s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.56s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.03s/it][A
-                                                                                 [AQuantizing model.layers blocks :  91%|█████████ | 29/32 [11:32<01:10, 23.37s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.55s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.54s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.54s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.55s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.55s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.56s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.02s/it][A
-                                                                                 [AQuantizing model.layers blocks :  94%|█████████▍| 30/32 [11:55<00:46, 23.35s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.57s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.55s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.55s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.55s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.56s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.56s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.03s/it][A
-                                                                                 [AQuantizing model.layers blocks :  97%|█████████▋| 31/32 [12:19<00:23, 23.36s/it]
-Quantizing layers inside the block:   0%|          | 0/7 [00:00<?, ?it/s][A
-Quantizing layers inside the block:  14%|█▍        | 1/7 [00:02<00:15,  2.55s/it][A
-Quantizing layers inside the block:  29%|██▊       | 2/7 [00:05<00:12,  2.55s/it][A
-Quantizing layers inside the block:  43%|████▎     | 3/7 [00:07<00:10,  2.55s/it][A
-Quantizing layers inside the block:  57%|█████▋    | 4/7 [00:10<00:07,  2.55s/it][A
-Quantizing layers inside the block:  71%|███████▏  | 5/7 [00:12<00:05,  2.56s/it][A
-Quantizing layers inside the block:  86%|████████▌ | 6/7 [00:15<00:02,  2.56s/it][A
-Quantizing layers inside the block: 100%|██████████| 7/7 [00:22<00:00,  4.04s/it][A
-                                                                                 [AQuantizing model.layers blocks : 100%|██████████| 32/32 [12:42<00:00, 23.37s/it]Quantizing model.layers blocks : 100%|██████████| 32/32 [12:42<00:00, 23.83s/it]
-/home/wenning1/.local/lib/python3.10/site-packages/transformers/modeling_utils.py:4225: FutureWarning: `_is_quantized_training_enabled` is going to be deprecated in transformers 4.39.0. Please use `model.hf_quantizer.is_trainable` instead
-  warnings.warn(
-[WARNING|logging.py:329] 2024-04-08 00:47:35,508 >> The cos_cached attribute will be removed in 4.39. Bear in mind that its contents changed in v4.38. Use the forward method of RoPE from now on instead. It is not used in the `LlamaAttention` class
-[WARNING|logging.py:329] 2024-04-08 00:47:35,508 >> The sin_cached attribute will be removed in 4.39. Bear in mind that its contents changed in v4.38. Use the forward method of RoPE from now on instead. It is not used in the `LlamaAttention` class
-[INFO|quantization_config.py:564] 2024-04-08 00:52:08,549 >> You have activated exllama backend. Note that you can get better inference speed using exllamav2 kernel by setting `exllama_config`.
-[INFO|configuration_utils.py:471] 2024-04-08 00:52:08,561 >> Configuration saved in models/llama2-7b-sft-int4/config.json
-[INFO|configuration_utils.py:697] 2024-04-08 00:52:08,562 >> Configuration saved in models/llama2-7b-sft-int4/generation_config.json
-[INFO|modeling_utils.py:2482] 2024-04-08 00:52:12,442 >> The model is bigger than the maximum size per checkpoint (1GB) and is going to be split in 4 checkpoint shards. You can find where each parameters has been saved in the index located at models/llama2-7b-sft-int4/model.safetensors.index.json.
-[INFO|tokenization_utils_base.py:2502] 2024-04-08 00:52:12,443 >> tokenizer config file saved in models/llama2-7b-sft-int4/tokenizer_config.json
-[INFO|tokenization_utils_base.py:2511] 2024-04-08 00:52:12,444 >> Special tokens file saved in models/llama2-7b-sft-int4/special_tokens_map.json
-slurmstepd: error: *** STEP 586721.0 ON gn1102 CANCELLED AT 2024-04-08T00:52:12 ***
