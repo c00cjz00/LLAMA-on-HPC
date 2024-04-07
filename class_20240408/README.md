@@ -48,32 +48,35 @@ cd /work/$(whoami)/github/LLAMA-on-HPC/class_20240408/
 # Extention packages (必要安裝)
 ./03-extention_package.sh
 
-# Extention packages (可不安裝)
-./04-install_llama_cpp.sh
+# Predict.sh packages (可不安裝)
+./04-predict_package.sh
+
+# llama_cpp packages (可不安裝)
+./05-install_llama_cpp.sh
 ```
 
 ## Singularity 容器操作練習
 - Execute command with Singularity
 ```
 cd /work/$(whoami)/github/LLAMA-on-HPC/class_20240408/
-./05-singularity_exec.sh
+./06-singularity_exec.sh
 ```
 - Interactive with Singularity
 ```
 cd /work/$(whoami)/github/LLAMA-on-HPC/class_20240408/
-./05-singularity_interactive.sh
+./06-singularity_interactive.sh
 ```
 
 ## Slurm 工作派送操作練習
 - Queue, SBATCH
 ```
 cd /work/$(whoami)/github/LLAMA-on-HPC/class_20240408/
-./06-srun_queue.sh
+./07-srun_queue.sh
 ```
 - Interactive, SRUN
 ```
 cd /work/$(whoami)/github/LLAMA-on-HPC/class_20240408/
-./06-srun_interactive.sh
+./07-srun_interactive.sh
 ```
 
 ## Dataset
