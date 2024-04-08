@@ -369,6 +369,6 @@ cache/huggingface/
 
 ### 4. Slurm logs 儲存位置
 ```
-cache/huggingface/
+logs/
 ```
 
