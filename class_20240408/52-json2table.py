@@ -1,4 +1,4 @@
-# cmd:  singularity exec --nv /work/u00cjz00/nvidia/cuda118/c00cjz00_cuda11.8_pytorch_2.1.2-cuda11.8-cudnn8-devel-unstructured.sif python json2table.py 1Q23-EPR-with-Tables-FINAL.pdf.json
+# cmd:  singularity exec --nv /work/u00cjz00/nvidia/cuda118/c00cjz00_cuda11.8_pytorch_2.1.2-cuda11.8-cudnn8-devel-unstructured.sif python json2table.py demo.json
 import sys
 import pandas as pd
 import json
