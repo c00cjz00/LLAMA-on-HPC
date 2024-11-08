@@ -42,7 +42,7 @@ pip install .[deepspeed,metrics,bitsandbytes]
 #singularity shell --nv /work/u00cjz00/nvidia/cuda118/c00cjz00_pytorch_2.4.0-cuda11.8-cudnn9-devel.sif
 
 singularity pull docker://c00cjz00/c00cjz00_pytorch:2.4.0-cuda12.1-cudnn9-devel
-singularity shell --nv /work/u00cjz00/nvidia/cuda118/c00cjz00_pytorch_2.4.0-cuda12.1-cudnn9-devel.sif
+singularity shell --nv /work/u00cjz00/nvidia/cuda12/c00cjz00_pytorch_2.4.0-cuda12.1-cudnn9-devel.sif
 
 cd ~/
 git clone https://github.com/hiyouga/LLaMA-Factory.git
