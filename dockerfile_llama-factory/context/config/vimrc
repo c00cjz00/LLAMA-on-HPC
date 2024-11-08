@@ -1,0 +1,23 @@
+
+set showcmd		" Show (partial) command in status line.
+set showmatch		" Show matching brackets.
+set ignorecase		" Do case insensitive matching
+set smartcase		" Do smart case matching
+set incsearch		" Incremental search
+set autowrite		" Automatically save before commands like :next and :make
+set hidden		" Hide buffers when they are abandoned
+
+set hlsearch
+set nu
+set autoindent
+set ts=4
+set sts=4
+set cindent
+set laststatus=2
+set shiftwidth=4
+set smarttab
+set smartindent
+set ruler
+set fileencodings=etf8,euc-kr
+set viminfo=
+colorscheme desert

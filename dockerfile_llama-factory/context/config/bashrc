@@ -1,0 +1,12 @@
+
+# env
+export PATH=.:$HOME/.local/bin:$PATH
+export LS_COLORS='di=00;36:fi=00;37'
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64
+
+# alias
+alias vb='vi ~/.bashrc'
+alias sb='source ~/.bashrc'
+alias wn='watch -n 0.5'
+alias wnnv='watch -n 0.5 nvidia-smi'
+alias jn='nohup jupyter notebook > /dev/null 2>&1 &'
